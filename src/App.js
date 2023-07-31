@@ -12,6 +12,7 @@ const [fact, setFact] = useState("")
 const [allFacts, setAllFacts] = useState([])
 const [gif, setGif] = useState("")
 const [savedFacts, setSavedFacts] = useState([])
+const [saved, setSaved] = useState('Save')
 
 useEffect(() => {
 fetch("https://meowfacts.herokuapp.com/?count=40")
@@ -26,19 +27,37 @@ useEffect(() => {
     .then(data => setGif(data.url))
   },[fact])
 
-
-
 function getFact() {
   const randomNum = Math.floor(Math.random() * allFacts.length)
   const currentFact = allFacts[randomNum]
   setFact(currentFact)
 }
 
-function toggleSavedFacts() {
+function toggleSavedFacts(index) {
+  const newSaved = saved === 'Save' ? 'Saved' : 'Save'
+  setSaved(newSaved)
+  { saved === 'Save' && 
 
-  setSavedFacts([...savedFacts, fact])
+  setSavedFacts([...savedFacts, fact])}
+  { saved === 'Saved' && removeFact(index)}
 
 }
+
+function removeFact() {
+  const filteredFacts = savedFacts.filter(f => {
+    return f !== fact 
+  })
+  setSavedFacts(filteredFacts)
+}
+
+function deleteSaved(index) {
+  let filterSaved = savedFacts.filter((fact, i) => i !== index);
+  setSavedFacts(filterSaved);
+  setSaved('Save')
+}
+
+
+
 
   return (
 
@@ -57,9 +76,9 @@ function toggleSavedFacts() {
        
       </div>}/>
 
-     <Route path="/saved" element={<Saved savedFacts={savedFacts}/>} />
+     <Route path="/saved" element={<Saved fact={fact} deleteSaved={deleteSaved} savedFacts={savedFacts}/>} />
       
-      </Routes>
+    </Routes>
     </div>
 
   );
