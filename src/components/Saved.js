@@ -16,7 +16,6 @@ export default function Saved({savedFacts,deleteSaved,fact}) {
         
     
 
-
     return (
         <div className="saved-facts-container">
 

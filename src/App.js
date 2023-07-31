@@ -12,7 +12,7 @@ const [fact, setFact] = useState("")
 const [allFacts, setAllFacts] = useState([])
 const [gif, setGif] = useState("")
 const [savedFacts, setSavedFacts] = useState([])
-const [saved, setSaved] = useState('Save')
+const [saved, setSaved] = useState('bookmark')
 
 useEffect(() => {
 fetch("https://meowfacts.herokuapp.com/?count=40")
@@ -72,7 +72,7 @@ function deleteSaved(index) {
         <p>Click Here For More Facts About Your Feline Friend !</p>
         <button className="get-random-button" onClick={getFact}>Get New Fact</button>
         
-        {fact?  <Card toggleSavedFacts={toggleSavedFacts} factText={fact}  /> : <p></p>}
+        {fact?  <Card saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact}  /> : <p></p>}
        
       </div>}/>
 
