@@ -11,6 +11,7 @@ function App() {
 const [fact, setFact] = useState("")
 const [allFacts, setAllFacts] = useState([])
 const [gif, setGif] = useState("")
+const [savedFacts, setSavedFacts] = useState([])
 
 useEffect(() => {
 fetch("https://meowfacts.herokuapp.com/?count=40")
@@ -33,6 +34,12 @@ function getFact() {
   setFact(currentFact)
 }
 
+function toggleSavedFacts() {
+
+  setSavedFacts([...savedFacts, fact])
+
+}
+
   return (
 
     <div className="App">
@@ -46,11 +53,11 @@ function getFact() {
         <p>Click Here For More Facts About Your Feline Friend !</p>
         <button className="get-random-button" onClick={getFact}>Get New Fact</button>
         
-        {fact?  <Card factText={fact}  /> : <p></p>}
+        {fact?  <Card toggleSavedFacts={toggleSavedFacts} factText={fact}  /> : <p></p>}
        
       </div>}/>
 
-     <Route path="/saved" element={<Saved />} />
+     <Route path="/saved" element={<Saved savedFacts={savedFacts}/>} />
       
       </Routes>
     </div>

@@ -2,7 +2,7 @@
 
 
 
-export default function Card({factText}) {
+export default function Card({factText,toggleSavedFacts}) {
 
 
 
@@ -11,7 +11,7 @@ export default function Card({factText}) {
         <div className="fact-card">
            
              <p>{factText}</p>
-             <button className="save-button">SAVE</button>
+             <button onClick={toggleSavedFacts} className="save-button">SAVE</button>
            
         </div>
 
