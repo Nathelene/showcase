@@ -1,6 +1,20 @@
 
-export default function Card() {
+
+
+
+export default function Card({factText}) {
+
+
+
     return (
-        <p>Card</p>
+
+        <div className="fact-card">
+           
+             <p>{factText}</p>
+             <button className="save-button">SAVE</button>
+           
+        </div>
+
+    
     )
 }
