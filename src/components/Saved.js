@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom"
-export default function Saved({savedFacts,deleteSaved,fact}) {
+export default function Saved({savedFacts,deleteSaved}) {
 
 
 

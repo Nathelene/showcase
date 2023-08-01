@@ -12,12 +12,16 @@ const [fact, setFact] = useState("")
 const [allFacts, setAllFacts] = useState([])
 const [gif, setGif] = useState("")
 const [savedFacts, setSavedFacts] = useState([])
-const [saved, setSaved] = useState('bookmark')
+const [saved, setSaved] = useState('save')
 
 useEffect(() => {
-fetch("https://meowfacts.herokuapp.com/?count=40")
+fetch("https://meowfacts.herokuapp.com/?count=5")
   .then(res => res.json())
-  .then(data => setAllFacts(data.data))
+  .then(data => {
+    
+    setAllFacts(data.data)
+    setSaved('save')
+})
 
 },[])
 
@@ -31,15 +35,18 @@ function getFact() {
   const randomNum = Math.floor(Math.random() * allFacts.length)
   const currentFact = allFacts[randomNum]
   setFact(currentFact)
+  setSaved('saved')
+  {savedFacts.some(fact=> fact === currentFact)? setSaved('saved') : setSaved('save')}
+
 }
 
 function toggleSavedFacts(index) {
-  const newSaved = saved === 'Save' ? 'Saved' : 'Save'
+  const newSaved = saved === 'save' ? 'saved' : 'save'
   setSaved(newSaved)
-  { saved === 'Save' && 
+  { saved === 'save' && 
 
   setSavedFacts([...savedFacts, fact])}
-  { saved === 'Saved' && removeFact(index)}
+  { saved === 'saved' && removeFact(index)}
 
 }
 
@@ -53,10 +60,8 @@ function removeFact() {
 function deleteSaved(index) {
   let filterSaved = savedFacts.filter((fact, i) => i !== index);
   setSavedFacts(filterSaved);
-  setSaved('Save')
+  setSaved('save')
 }
-
-
 
 
   return (
