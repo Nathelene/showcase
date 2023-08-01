@@ -6,9 +6,13 @@ export default function Saved({savedFacts,deleteSaved}) {
 
             const savedArray = savedFacts.map((fact, index) => {
                 return (
+                <div className="save-card-container">
                   <div className="saved-card" key={index}>
                     <p>{fact}</p>
-                    <button onClick={() => deleteSaved(index)}>Delete</button>
+                  </div>
+                  <button className="delete-button" onClick={() => deleteSaved(index)}><span class="material-symbols-outlined">
+delete
+</span></button>
                   </div>
                 );
               });
@@ -17,9 +21,11 @@ export default function Saved({savedFacts,deleteSaved}) {
     return (
         <div className="saved-facts-container">
 
-            <h2>Saved Facts</h2>
+            <h3 className="saved-title">{savedArray.length} saved facts</h3>
             <NavLink to='/'>
-            <button>Home</button>
+            <button className="back-button"><span class="material-symbols-outlined">
+arrow_back
+</span></button>
             </NavLink>
             {savedArray}
         </div>

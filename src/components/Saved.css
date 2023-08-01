@@ -1,0 +1,47 @@
+.back-button {
+    background-color: transparent;
+    border:none;
+    margin-bottom: 5%;
+    color:rgb(172, 88, 116)
+}
+
+.saved-card {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(172, 88, 116);;
+    width: 40vw;
+    height:15vh;
+    border-radius: 5px;
+    
+}
+
+.saved-facts-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.save-card-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(172, 88, 116);;
+    width: 50vw;
+    height:17vh;
+    border-radius: 5px;
+    margin-top: 1%;
+    border: 7px solid rgb(238, 168, 179);
+    color: rgb(238, 168, 179);
+}
+
+.delete-button {
+    background-color: transparent;
+    border:none;
+    color:rgb(238, 168, 179)
+}
+.saved-title {
+    color:rgb(172, 88, 116);
+    font-size: 2.5vh;
+}

@@ -1,7 +1,10 @@
 .App {
   text-align: center;
   background-color: rgb(252, 216, 221);
-  height:100vh
+  color:rgb(172, 88, 116);
+  height:100vh;
+  font-family: 'Lumanosimo', cursive;
+
 }
 
 .App-header {
@@ -23,16 +26,32 @@
   height:5vh;
   width:15vw;
   border:none;
-  background-color:  palevioletred;
+  background-color:  rgb(172, 88, 116);
   border-radius: 5px;
-  color:pink;
+  color:rgb(252, 216, 221);
   font-size: 2.3vh;
   margin-left: 43%;
   margin-top: 3%;
+  font-family: 'Lumanosimo', cursive;
 }
 
 .space {
   color:palevioletred;
 }
 
+.intro {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(172, 88, 116);
+  color:rgb(252, 216, 221);
+  width: 40vw;
+  height:20vh */
+  border:5px solid rgb(172, 88, 116);
+  border-radius: 5px;
+  width:45%;
+  margin-left:27%;
+  margin-top:4%
+  
+}
 
