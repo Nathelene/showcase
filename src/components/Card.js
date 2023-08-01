@@ -1,17 +1,18 @@
 
-export default function Card({factText, toggleSavedFacts,saved}) {
-
+import './Card.css'
+export default function Card({factText, toggleSavedFacts,saved,gif}) {
 
 
     return (
-
+        <div className="fact-container">
+        <img className="cat-gif" src={gif}/>
         <div className="fact-card">
            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
              <p>{factText}</p>
-             <button onClick={toggleSavedFacts} className="save-button"> 
-               {saved}<span class="material-symbols-outlined">pets</span>
+        </div>
+        <button onClick={toggleSavedFacts} className="save-button"> 
+             <span class="material-symbols-outlined">{saved}</span>
             </button>
-           
         </div>
 
     

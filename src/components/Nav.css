@@ -1,3 +1,30 @@
 .nav {
-    height:40%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgb(172, 88, 116);
+    height:15vh;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.saved-button {
+  background-color: transparent;
+  border:none;
+  height:5vh;
+  border-radius: 8px;
+  color:rgb(172, 88, 116)
+}
+
+ .saved-button:hover {
+    background-color: pink;
+}
+
+.header {
+    margin-left: 40%;
+    margin-right: 35%;
+    color:rgb(172, 88, 116);
+    font-size: 4vh;
 }
