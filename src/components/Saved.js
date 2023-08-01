@@ -1,10 +1,9 @@
 
 import { NavLink } from "react-router-dom"
+import './Saved.css'
+
 export default function Saved({savedFacts,deleteSaved}) {
 
-
-
-    
             const savedArray = savedFacts.map((fact, index) => {
                 return (
                   <div className="saved-card" key={index}>
@@ -15,7 +14,6 @@ export default function Saved({savedFacts,deleteSaved}) {
               });
         
     
-
     return (
         <div className="saved-facts-container">
 

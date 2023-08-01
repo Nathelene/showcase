@@ -1,16 +1,7 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: rgb(252, 216, 221);
+  height:100vh
 }
 
 .App-header {
@@ -24,14 +15,24 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.get-random-button {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:5vh;
+  width:15vw;
+  border:none;
+  background-color:  palevioletred;
+  border-radius: 5px;
+  color:pink;
+  font-size: 2.3vh;
+  margin-left: 43%;
+  margin-top: 3%;
 }
 
-.cat-gif {
-  border-radius: 100px;
-  height:24vh;
-  width:13vw;
+.space {
+  color:palevioletred;
 }
 
 

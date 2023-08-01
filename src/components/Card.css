@@ -1,0 +1,39 @@
+.fact-card {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:35vw;
+    height:30vh;
+    margin-right: 10%;
+    border-bottom: 3px solid palevioletred;
+}
+
+.save-button {
+    background: transparent;
+    border:none;
+    color:palevioletred;
+   
+}
+
+.cat-gif {
+    border-radius: 100px;
+    height:24vh;
+    width:13vw;
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+
+  .fact-container {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height:40vh;
+    width:70vw;
+    margin-left: 15%;
+    margin-right: 20%;
+    margin-top: 3%;
+    background-color:pink;
+    border-radius: 10px;
+    border: 7px solid  palevioletred;;
+  }

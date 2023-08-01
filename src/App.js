@@ -13,7 +13,7 @@ const [fact, setFact] = useState("")
 const [allFacts, setAllFacts] = useState([])
 const [gif, setGif] = useState("")
 const [savedFacts, setSavedFacts] = useState([])
-const [saved, setSaved] = useState('save')
+const [saved, setSaved] = useState('bookmark')
 
 useEffect(() => {
 fetch("https://meowfacts.herokuapp.com/?count=100")
@@ -21,33 +21,36 @@ fetch("https://meowfacts.herokuapp.com/?count=100")
   .then(data => {
     
     setAllFacts(data.data)
-    setSaved('save')
+    setSaved('bookmark')
 })
 
 },[])
 
-useEffect(() => {
+// useEffect(() => {
 
-  getImage()
-    .then(data => setGif(data.url))
+  // getImage()
+  //   .then(data => setGif(data.url))
 
-  },[])
+  // },[gif])
 
 function getFact() {
   const randomNum = Math.floor(Math.random() * allFacts.length)
   const currentFact = allFacts[randomNum]
   setFact(currentFact)
-  setSaved('saved')
-  {savedFacts.some(fact=> fact === currentFact)? setSaved('saved') : setSaved('save')}
+  setSaved('bookmark')
+  getImage()
+    .then(data => setGif(data.url))
+ 
+  {savedFacts.some(fact=> fact === currentFact)? setSaved('bookmark_added') : setSaved('bookmark')}
 }
 
 function toggleSavedFacts(index) {
-  const newSaved = saved === 'save' ? 'saved' : 'save'
+  const newSaved = saved === 'bookmark' ? 'bookmark_added' : 'bookmark'
   setSaved(newSaved)
-  { saved === 'save' && 
+  { saved === 'bookmark' && 
 
   setSavedFacts([...savedFacts, fact])}
-  { saved === 'saved' && removeFact(index)}
+  { saved === 'bookmark_added' && removeFact(index)}
 
 }
 
@@ -61,7 +64,7 @@ function removeFact() {
 function deleteSaved(index) {
   let filterSaved = savedFacts.filter((fact, i) => i !== index);
   setSavedFacts(filterSaved);
-  setSaved('save')
+  setSaved('bookmark')
 }
 
 
@@ -73,12 +76,19 @@ function deleteSaved(index) {
       <Route path="/" element={ 
 
       <div className="home">
-        <h2>Welcome!</h2>
-        <img className="cat-gif" src={gif}/>
-        <p>Click Here For More Facts About Your Feline Friend !</p>
-        <button className="get-random-button" onClick={getFact}>Get New Fact</button>
         
-        {fact?  <Card saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact}  /> : <p></p>}
+        {!fact && 
+        <>
+        <h2>Welcome!</h2>
+        <p>Click Here For More Facts About Your Feline Friend !</p>
+        </>}
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span><span class="material-symbols-outlined">
+pets
+</span></button>
+        
+        {fact?  <Card gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact}  /> : <p></p>}
        
       </div>}/>
 
