@@ -5,6 +5,7 @@ import Card from './components/Card'
 import Saved from './components/Saved'
 import { useEffect, useState } from 'react'
 import { Routes,Route } from 'react-router-dom'
+import getImage from './components/ApiCalls';
 
 function App() {
 
@@ -15,7 +16,7 @@ const [savedFacts, setSavedFacts] = useState([])
 const [saved, setSaved] = useState('save')
 
 useEffect(() => {
-fetch("https://meowfacts.herokuapp.com/?count=5")
+fetch("https://meowfacts.herokuapp.com/?count=100")
   .then(res => res.json())
   .then(data => {
     
@@ -26,10 +27,11 @@ fetch("https://meowfacts.herokuapp.com/?count=5")
 },[])
 
 useEffect(() => {
-  fetch("https://cataas.com/cat/gif")
-    .then(res => res)
+
+  getImage()
     .then(data => setGif(data.url))
-  },[fact])
+
+  },[])
 
 function getFact() {
   const randomNum = Math.floor(Math.random() * allFacts.length)
@@ -37,7 +39,6 @@ function getFact() {
   setFact(currentFact)
   setSaved('saved')
   {savedFacts.some(fact=> fact === currentFact)? setSaved('saved') : setSaved('save')}
-
 }
 
 function toggleSavedFacts(index) {
