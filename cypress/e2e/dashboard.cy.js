@@ -35,7 +35,7 @@ beforeEach(() => {
       statusCode: 500,
       fixture: "facts"
     })
-    cy.get('.error-message')
+    cy.get('.home').get(".error-message")
   })
 
   it('should display an error message if cat gif network request fails', () => {
@@ -43,8 +43,7 @@ beforeEach(() => {
       statusCode: 500,
       fixture: "response.gif"
     })
-    cy.get('.error-message')
+    cy.get('.home').get(".error-message")
   })
 
-  
 })
