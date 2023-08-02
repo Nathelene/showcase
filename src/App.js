@@ -19,7 +19,6 @@ useEffect(() => {
 fetch("https://meowfacts.herokuapp.com/?count=100")
   .then(res => res.json())
   .then(data => {
-    
     setAllFacts(data.data)
     setSaved('bookmark')
 })
@@ -30,33 +29,27 @@ useEffect(() => {
 
   getImage()
     .then(data => setGif(data.url))
-
-  },[gif])
+    
+  },[])
 
 function getFact() {
   const randomNum = Math.floor(Math.random() * allFacts.length)
   const currentFact = allFacts[randomNum]
   setFact(currentFact)
   setSaved('bookmark')
-
- 
   {savedFacts.some(fact=> fact === currentFact)? setSaved('bookmark_added') : setSaved('bookmark')}
 }
 
 function toggleSavedFacts(index) {
   const newSaved = saved === 'bookmark' ? 'bookmark_added' : 'bookmark'
   setSaved(newSaved)
-  { saved === 'bookmark' && 
-
-  setSavedFacts([...savedFacts, fact])}
+  { saved === 'bookmark' && setSavedFacts([...savedFacts, fact])}
   { saved === 'bookmark_added' && removeFact(index)}
 
 }
 
 function removeFact() {
-  const filteredFacts = savedFacts.filter(f => {
-    return f !== fact 
-  })
+  const filteredFacts = savedFacts.filter(f =>  f !== fact)
   setSavedFacts(filteredFacts)
 }
 
@@ -66,15 +59,12 @@ function deleteSaved(index) {
   setSaved('bookmark')
 }
 
-
   return (
 
     <div className="App">
-       <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Lumanosimo&family=Roboto:wght@100&display=swap" rel="stylesheet"/>
-
-      
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+      <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&family=Roboto:wght@100&display=swap" rel="stylesheet"/>
       <Nav />
     <Routes>
       <Route path="/" element={ 
@@ -88,16 +78,12 @@ function deleteSaved(index) {
         </div>}
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span><span class="material-symbols-outlined">
-pets
-</span></button>
-        
+        <button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span>
+        <span class="material-symbols-outlined">pets</span></button>
         {fact?  <Card gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact}  /> : <p></p>}
-       
-      </div>}/>
+        </div>} />
 
-     <Route path="/saved" element={<Saved fact={fact} deleteSaved={deleteSaved} savedFacts={savedFacts}/>} />
-      
+        <Route path="/saved" element={<Saved fact={fact} deleteSaved={deleteSaved} savedFacts={savedFacts}/>} />
     </Routes>
     </div>
 
