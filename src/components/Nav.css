@@ -28,3 +28,69 @@
     color:rgb(172, 88, 116);
     font-size: 4vh;
 }
+
+@media screen and (max-width: 1146px) {
+    .header {
+        margin-left: 38%;
+        margin-right: 33%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .header {
+        margin-left: 32%;
+        margin-right: 26%;
+        font-size: 3vh;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .header {
+        margin-left: 30%;
+    }
+}
+
+@media screen and (max-width: 869px) {
+    .header {
+        margin-left: 30%;
+        margin-right: 25%;
+        font-size: 2.9vh;
+    }
+}
+
+@media screen and (max-width: 774px) {
+    .header {
+        margin-left: 24%;
+        margin-right: 19%;
+        font-size: 3.3vh;
+    }
+}
+
+@media screen and (max-width: 656px) {
+    .header {
+        margin-left: 20%;
+        margin-right: 15%;
+        font-size: 3.2vh;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .header {
+        margin-left: 12%;
+        margin-right: 8%;
+        font-size: 2.9vh;
+    }
+    .nav {
+        height:12.5vh
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .header {
+        margin-left: 12%;
+        margin-right: 7%;
+        font-size: 2.9vh;
+    }
+   
+}
+

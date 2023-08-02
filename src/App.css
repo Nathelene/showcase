@@ -7,16 +7,6 @@
 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 
 .get-random-button {
@@ -36,17 +26,10 @@
 }
 
 .space {
-  color:palevioletred;
+  color:rgb(172, 88, 116);
 }
 
 .intro {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(172, 88, 116);
-  color:rgb(252, 216, 221);
-  width: 40vw;
-  height:20vh */
   border:5px solid rgb(172, 88, 116);
   border-radius: 5px;
   width:45%;
@@ -55,3 +38,137 @@
   
 }
 
+@media screen and (max-width: 1137px) {
+  .intro {
+    width:50%;
+    margin-left:25%;
+  }
+  .get-random-button {
+    height:5vh;
+    width:18vw;
+    font-size: 2.3vh;
+    margin-left: 42%;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .get-random-button {
+    height:5vh;
+    width:35vw;
+    font-size: 2.3vh;
+    margin-left: 34%;
+  }
+}
+
+
+@media screen and (max-width: 950px) {
+  .intro {
+    width:55%;
+    margin-left:22%;
+  }
+  .get-random-button {
+    height:4.5vh;
+    width:28vw;
+    font-size: 1.9vh;
+    margin-left: 37%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .intro {
+    width:63%;
+    margin-left:17%;
+  }
+  .get-random-button {
+    height:5vh;
+    width:37vw;
+    font-size: 2vh;
+    margin-left: 32%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .intro {
+    width:71%;
+    margin-left:14%;
+  }
+  .get-random-button {
+    height:5vh;
+    width:43vw;
+    font-size: 2vh;
+    margin-left: 29%;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .intro {
+    width:75%;
+    margin-left:12%;
+  }
+  .get-random-button {
+    height:5vh;
+    width:50vw;
+    font-size: 2vh;
+    margin-left: 26%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .intro {
+    width:80%;
+    margin-left:9%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .intro {
+    width:65%;
+    height:20vh;
+    margin-left:16%;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .intro {
+    width:60%;
+    height:20vh;
+    margin-left:18%;
+  }
+  .get-random-button {
+    height:5vh;
+    width:60vw;
+    font-size: 2vh;
+    margin-left: 21%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .intro {
+    width:60%;
+    height:20vh;
+    margin-left:18%;
+  }
+  .get-random-button {
+    height:5vh;
+    width:40vw;
+    font-size: 1.5vh;
+    margin-left: 30%;
+    margin-top: 6%;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .intro {
+    width:64%;
+    height:25vh;
+    margin-left:16%;
+    font-size: 2vh;
+  }
+
+  .get-random-button {
+    width:45vw;
+    font-size: 1.8vh;
+    margin-left: 27%;
+  }
+}
