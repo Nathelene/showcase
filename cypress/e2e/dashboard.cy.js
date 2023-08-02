@@ -30,5 +30,20 @@ beforeEach(() => {
       })
   });
 
-  
+  it('should display an error message if cat fact network request fails', () => {
+    cy.intercept("GET", "https://meowfacts.herokuapp.com/?count=100", {
+      statusCode: 500,
+      fixture: "facts"
+    })
+    cy.get('.home').get(".error-message")
+  })
+
+  it('should display an error message if cat gif network request fails', () => {
+    cy.intercept("GET", "https://cataas.com/cat/gif", {
+      statusCode: 500,
+      fixture: "response.gif"
+    })
+    cy.get('.home').get(".error-message")
+  })
+
 })
