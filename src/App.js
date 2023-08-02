@@ -16,10 +16,10 @@ const [gif, setGif] = useState("")
 const [savedFacts, setSavedFacts] = useState([])
 const [saved, setSaved] = useState('bookmark')
 const [error, setError] = useState('')
-const [loading, setLoading] = useState(false)
+const [loading, setLoading] = useState(true)
 
 useEffect(() => {
-setLoading(true)
+
 fetch("https://meowfacts.herokuapp.com/?count=100")
   .then(res => {
     if(!res.ok) {
@@ -30,7 +30,7 @@ fetch("https://meowfacts.herokuapp.com/?count=100")
   .then(data => {
     setAllFacts(data.data)
     setSaved('bookmark')
-    // setLoading(false)
+    setLoading(false)
     setError('')
 })
 .catch(err => {
@@ -41,7 +41,7 @@ fetch("https://meowfacts.herokuapp.com/?count=100")
 },[])
 
 useEffect(() => {
- setLoading(true)
+
      fetch("https://cataas.com/cat/gif")
      .then(res => {
       if(!res.ok) {
@@ -51,7 +51,7 @@ useEffect(() => {
     })
       .then(data => {
         setGif(data.url)
-        setLoading(true)
+        setLoading(false)
         setError('')
       })
       .catch(err => {
