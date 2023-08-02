@@ -39,3 +39,9 @@
     border: 7px solid  rgb(172, 88, 116);
     color:rgb(172, 88, 116);;
   }
+
+  .loading-message {
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size:2.5vh
+  }
