@@ -113,7 +113,7 @@ function deleteSaved(index) {
             </div>} />
 
             <Route path="/saved" element={<Saved error={error} fact={fact} deleteSaved={deleteSaved} savedFacts={savedFacts}/>} />
-            <Route path="/404" element={<PageNotFound />} />
+            <Route path="*" element={<PageNotFound />} />
         </Routes>
     </div>
 

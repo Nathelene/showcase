@@ -46,4 +46,12 @@ beforeEach(() => {
     cy.get('.home').get(".error-message")
   })
 
+  it('should display a 404 error when route is not recognized',() => {
+    cy.visit('http://localhost:3000/cat')
+    .get('.page-not-found').contains('h2', '404 page not found')
+    .get('.error-home').contains('p', 'Please Try Again')
+    .get('.error-home').click()
+    .url().should('include', '/')
+  })
+
 })
