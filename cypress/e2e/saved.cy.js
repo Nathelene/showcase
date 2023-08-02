@@ -6,7 +6,7 @@ beforeEach(() => {
   })
   cy.intercept("GET", "https://cataas.com/cat/gif",{
     statusCode:200,
-    fixture:"gif"
+    fixture:"response.gif"
   })
   cy.visit("http://localhost:3000/")
 })
