@@ -11,7 +11,7 @@ export default function Card({factText, toggleSavedFacts,saved,gif,loading}) {
              <p>{factText}</p>
           </div>
             <button onClick={toggleSavedFacts} className="save-button"> 
-                <span class="material-symbols-outlined">{saved}</span>
+                <span className="material-symbols-outlined">{saved}</span>
             </button>
         </div>
     )

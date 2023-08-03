@@ -88,7 +88,7 @@ function deleteSaved(index) {
 
     <div className="App">
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&family=Roboto:wght@100&display=swap" rel="stylesheet"/>
       <Nav />
         <Routes>
@@ -103,12 +103,12 @@ function deleteSaved(index) {
               <p>Click below to learn more about your Meow-velous companion!</p>
             </div>
               <button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span> 
-              <span class="material-symbols-outlined">pets</span></button>
+              <span className="material-symbols-outlined">pets</span></button>
             </> }
             {fact?  
               <>
               <button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span> 
-              <span class="material-symbols-outlined">pets</span></button><Card loading={loading} gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact} />
+              <span className="material-symbols-outlined">pets</span></button><Card loading={loading} gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact} />
               </> : <p></p> }
             </div> } />
             <Route path="/saved" element={<Saved error={error} fact={fact} deleteSaved={deleteSaved} savedFacts={savedFacts}/> } />

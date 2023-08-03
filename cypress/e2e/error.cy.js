@@ -1,5 +1,4 @@
 describe('The user will be notified of failed connection and 404 error when necessary', () => {
- 
 
     it('should display an error message if cat fact network request fails', () => {
       cy.intercept("GET", "https://meowfacts.herokuapp.com/?count=50", {
@@ -15,11 +14,10 @@ describe('The user will be notified of failed connection and 404 error when nece
       cy.visit("http://localhost:3000/")
 
       cy.wait(['@500','@gif']).then((intercept) => {
-        cy.get('.home').get(".error-message").should('be.visible');
+      cy.get('.home').get(".error-message").should('be.visible');
         
       })
-    
-    })
+    });
 
     
   it('should display an error message if cat gif network request fails', () => {
@@ -38,7 +36,6 @@ describe('The user will be notified of failed connection and 404 error when nece
     cy.wait(['@500','@fact']).then((intercept) => {
       cy.get('.home').get(".error-message").should('be.visible');
     })
-   
   })
 
   it('should display a 404 error when route is not recognized',() => {

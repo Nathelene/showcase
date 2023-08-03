@@ -19,7 +19,7 @@ it('should allow the user to save a fact and delete the fact on the saved fact p
   cy.get(".get-random-button").click({ force: true }).get(".fact-container")
     .get(".fact-container").should('be.visible').within(() => {
       cy.get(".fact-card").contains("p", "Almost 10% of a cat's bones are in its tail, and the tail is used to maintain balance.")
-        .get(".save-button").click({ force: true })
+        .get(".save-button").should('be.visible').click({ force: true })
     })
     .get(".saved-button").click({ force: true })
     .url().should("include", "/saved")
