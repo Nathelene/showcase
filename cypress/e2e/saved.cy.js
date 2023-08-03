@@ -13,11 +13,11 @@ beforeEach(() => {
 
 
 it('should allow the user to save a fact and delete the fact on the saved fact page', () => {
-  cy.wait('@fact')
+  cy.wait('@fact', {timeOut: 10000})
   cy.wait('@gif')
+  cy.wait(5000)
   cy.get(".get-random-button").click({ force: true }).get(".fact-container")
-    .get(".fact-container")
-     .within(() => {
+    .get(".fact-container").should('be.visible').within(() => {
       cy.get(".fact-card").contains("p", "Almost 10% of a cat's bones are in its tail, and the tail is used to maintain balance.")
         .get(".save-button").click({ force: true })
     })

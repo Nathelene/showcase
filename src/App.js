@@ -3,10 +3,9 @@ import './App.css';
 import Nav from './components/Nav'
 import Card from './components/Card'
 import Saved from './components/Saved'
+import PageNotFound from './components/PageNotFound';
 import { useEffect, useState } from 'react'
 import { Routes,Route } from 'react-router-dom'
-import getImage from './components/ApiCalls';
-import PageNotFound from './components/PageNotFound';
 
 function App() {
 
@@ -20,44 +19,44 @@ const [loading, setLoading] = useState(true)
 
 useEffect(() => {
 
-fetch("https://meowfacts.herokuapp.com/?count=50")
-  .then(res => {
-    if(!res.ok) {
-      throw Error('Unexpected error. Please refresh the page')
-    }
-    return res.json()
-  })
-  .then(data => {
-    setAllFacts(data.data)
-    setSaved('bookmark')
-    setLoading(false)
-  })
-  .catch(err => {
-    setLoading(false)
-    setError(err.message)
-  })
+  fetch("https://meowfacts.herokuapp.com/?count=50")
+    .then(res => {
+      if(!res.ok) {
+        throw Error('Unexpected error. Please refresh the page')
+      }
+      return res.json()
+    })
+    .then(data => {
+      setAllFacts(data.data)
+      setSaved('bookmark')
+      setLoading(false)
+    })
+    .catch(err => {
+      setLoading(false)
+      setError(err.message)
+    })
 
 },[])
 
 useEffect(() => {
 
-     fetch("https://cataas.com/cat/gif")
-     .then(res => {
-      if(!res.ok) {
-        throw Error('Unexpected error. Please refresh the page')
-      }
-      return res
-    })
-      .then(data => {
-        setGif(data.url)
-        setLoading(false)
-      })
-      .catch(err => {
-        setLoading(false)
-        setError(err.message)
-      })
+  fetch("https://cataas.com/cat/gif")
+    .then(res => {
+    if(!res.ok) {
+      throw Error('Unexpected error. Please refresh the page')
+    }
+    return res
+  })
+    .then(data => {
+      setGif(data.url)
+      setLoading(false)
+  })
+    .catch(err => {
+      setLoading(false)
+      setError(err.message)
+  })
     
-  },[])
+},[])
 
 function getFact() {
   const randomNum = Math.floor(Math.random() * allFacts.length)
@@ -100,25 +99,23 @@ function deleteSaved(index) {
             !fact && 
             <>
             <div className="intro">
-            <h2>Welcome Cat Lovers!</h2>
-            <p>Click below to learn more about your Meow-velous companion!</p>
+              <h2>Welcome Cat Lovers!</h2>
+              <p>Click below to learn more about your Meow-velous companion!</p>
             </div>
-            <button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span> 
-            <span class="material-symbols-outlined">pets</span></button>
-            </>
-            }
-           
-            {fact?  <><button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span> 
-            <span class="material-symbols-outlined">pets</span></button><Card loading={loading} gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact}  /></> : <p></p>}
-          
-            </div>} />
-
-            <Route path="/saved" element={<Saved error={error} fact={fact} deleteSaved={deleteSaved} savedFacts={savedFacts}/>} />
+              <button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span> 
+              <span class="material-symbols-outlined">pets</span></button>
+            </> }
+            {fact?  
+              <>
+              <button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span> 
+              <span class="material-symbols-outlined">pets</span></button><Card loading={loading} gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact} />
+              </> : <p></p> }
+            </div> } />
+            <Route path="/saved" element={<Saved error={error} fact={fact} deleteSaved={deleteSaved} savedFacts={savedFacts}/> } />
             <Route path="*" element={<PageNotFound />} />
         </Routes>
     </div>
-
-  );
-}
+  )
+};
 
 export default App;

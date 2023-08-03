@@ -9,7 +9,6 @@
     margin-right: 10%;
 }
 
-
 .saved-button {
   background-color: transparent;
   border:none;
@@ -40,44 +39,22 @@
     .header {
         margin-left: 32%;
         margin-right: 26%;
-        font-size: 3vh;
-    }
-}
-
-@media screen and (max-width: 912px) {
-    .header {
-        margin-left: 30%;
-    }
-}
-
-@media screen and (max-width: 869px) {
-    .header {
-        margin-left: 30%;
-        margin-right: 25%;
-        font-size: 2.9vh;
-    }
-}
-
-@media screen and (max-width: 774px) {
-    .header {
-        margin-left: 24%;
-        margin-right: 19%;
-        font-size: 3.3vh;
+        font-size: 3.5vh;
     }
 }
 
 @media screen and (max-width: 656px) {
     .header {
-        margin-left: 20%;
-        margin-right: 15%;
+        margin-left: 30%;
+        margin-right: 20%;;
         font-size: 3.2vh;
     }
 }
 
 @media screen and (max-width: 568px) {
     .header {
-        margin-left: 12%;
-        margin-right: 8%;
+        margin-left: 28%;
+        margin-right: 18%;
         font-size: 2.9vh;
     }
     .nav {
@@ -87,10 +64,8 @@
 
 @media screen and (max-width: 414px) {
     .header {
-        margin-left: 12%;
-        margin-right: 7%;
-        font-size: 2.9vh;
+        margin-left: 20%;
+        margin-right: 11%;
     }
-   
 }
 
