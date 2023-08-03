@@ -20,7 +20,7 @@ const [loading, setLoading] = useState(true)
 
 useEffect(() => {
 
-fetch("https://meowfacts.herokuapp.com/?count=100")
+fetch("https://meowfacts.herokuapp.com/?count=50")
   .then(res => {
     if(!res.ok) {
       throw Error('Unexpected error. Please refresh the page')
@@ -31,12 +31,11 @@ fetch("https://meowfacts.herokuapp.com/?count=100")
     setAllFacts(data.data)
     setSaved('bookmark')
     setLoading(false)
-    setError('')
-})
-.catch(err => {
-  setLoading(false)
-  setError(err.message)
-})
+  })
+  .catch(err => {
+    setLoading(false)
+    setError(err.message)
+  })
 
 },[])
 
@@ -52,7 +51,6 @@ useEffect(() => {
       .then(data => {
         setGif(data.url)
         setLoading(false)
-        setError('')
       })
       .catch(err => {
         setLoading(false)
@@ -74,7 +72,6 @@ function toggleSavedFacts(index) {
   setSaved(newSaved)
   { saved === 'bookmark' && setSavedFacts([...savedFacts, fact])}
   { saved === 'bookmark_added' && removeFact(index)}
-
 }
 
 function removeFact() {
@@ -99,21 +96,25 @@ function deleteSaved(index) {
           <Route path="/" element={ 
 
           <div className="home">
-            {error && <h1 className="error-message">{error}</h1>}
-            {!fact && 
+            { error ? <h3 className="error-message">{error}</h3> :
+            !fact && 
+            <>
             <div className="intro">
             <h2>Welcome Cat Lovers!</h2>
             <p>Click below to learn more about your Meow-velous companion!</p>
-            </div>}
-            
-            <button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span>
+            </div>
+            <button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span> 
             <span class="material-symbols-outlined">pets</span></button>
-            {fact?  <Card loading={loading} gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact}  /> : <p></p>}
+            </>
+            }
+           
+            {fact?  <><button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span> 
+            <span class="material-symbols-outlined">pets</span></button><Card loading={loading} gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact}  /></> : <p></p>}
           
             </div>} />
 
             <Route path="/saved" element={<Saved error={error} fact={fact} deleteSaved={deleteSaved} savedFacts={savedFacts}/>} />
-            <Route path="/404" element={<PageNotFound />} />
+            <Route path="*" element={<PageNotFound />} />
         </Routes>
     </div>
 

@@ -5,7 +5,7 @@ export default function PageNotFound() {
         <div className="page-not-found">
             <h2>404 page not found</h2>
             <NavLink to="/">
-                <p>Please Try Again</p>
+                <p className="error-home">Please Try Again</p>
             </NavLink>
         </div>
     )

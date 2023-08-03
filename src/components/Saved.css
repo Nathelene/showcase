@@ -45,3 +45,71 @@
     color:rgb(172, 88, 116);
     font-size: 2.5vh;
 }
+
+@media screen and (max-width: 1400px) {
+    
+    .save-card-container {
+        width: 53vw;
+        height:25vh;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .save-card-container {
+        width: 60vw;
+    }
+  }
+  
+  @media screen and (max-width: 980px) {
+    .save-card-container {
+        width: 65vw;
+    }
+    .saved-card {
+        width: 55vw;
+        height:15vh;
+    }
+  }
+  
+  @media screen and (max-width: 890px) {
+    .saved-card {
+        width: 55vw;
+        height:15vh;
+    }
+  }
+  
+  @media screen and (max-width: 690px) {
+    .saved-card {
+        width: 60vw;
+    }
+    .save-card-container {
+        width: 75vw;
+        height:25vh;
+    }
+  }
+  
+  @media screen and (max-width: 580px) {
+    .saved-card {
+        width: 67vw;
+    }
+    .save-card-container {
+        width: 85vw;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .save-card-container {
+        height:30vh;
+    }
+  }
+  @media screen and (max-width: 460px) {
+    .save-card-container {
+        height:35vh;
+    }
+  }
+  
+  @media screen and (max-width: 395px) {
+        .save-card-container {
+            height:40vh;
+            font-size: 2vh;
+        }
+  }
