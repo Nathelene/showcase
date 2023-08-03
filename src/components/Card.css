@@ -8,11 +8,10 @@
     margin-right: 7%;
     font-size: 2.5vh;
 }
-
 .save-button {
-    background: transparent;
-    border:none;
-    color:rgb(172, 88, 116);;
+  background: transparent;
+  border:none;
+  color:rgb(172, 88, 116);;
 }
 
 .cat-gif {
@@ -47,26 +46,25 @@
 
 @media screen and (max-width: 1190px) {
   .fact-container {
-    /* display:flex; */
     height:47vh;
     width:88vw;
     margin-left: 5%;
     margin-right: 15%; 
   } 
-.cat-gif {
-  height:21.5vh;
-  width:14vw;
-}
-.fact-card {
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width:50vw;
-  height:45vh;
-  font-size: 2.2vh;
- margin-left:4%
-}
+  .cat-gif {
+    height:21.5vh;
+    width:14vw;
+  }
+  .fact-card {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:50vw;
+    height:45vh;
+    font-size: 2.2vh;
+  margin-left:4%
+  }
 }
 
 @media screen and (max-width: 912px) {
@@ -96,7 +94,7 @@
     height:41vh;
     font-size: 2.2vh;
    margin-left:4%
-}
+  }
 }
 
 @media screen and (max-width: 880px) {
@@ -108,8 +106,7 @@
   .fact-card {
     width:79vw;
     height:37vh; 
-}
-
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -180,7 +177,7 @@
     height:46vh;
     font-size: 1.9vh;
    margin-left:4%
-}
+  }
 }
 
 @media screen and (max-width: 395px) {

@@ -20,7 +20,7 @@ const [loading, setLoading] = useState(true)
 
 useEffect(() => {
 
-fetch("https://meowfacts.herokuapp.com/?count=100")
+fetch("https://meowfacts.herokuapp.com/?count=50")
   .then(res => {
     if(!res.ok) {
       throw Error('Unexpected error. Please refresh the page')

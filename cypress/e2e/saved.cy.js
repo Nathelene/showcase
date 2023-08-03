@@ -1,18 +1,20 @@
 
 beforeEach(() => {
-  cy.intercept("GET", "https://meowfacts.herokuapp.com/?count=100", {
+  cy.intercept("GET", "https://meowfacts.herokuapp.com/?count=50", {
     statusCode:200,
     fixture:"facts"
-  })
+  }).as('fact')
   cy.intercept("GET", "https://cataas.com/cat/gif",{
     statusCode:200,
     fixture:"response.gif"
-  })
+  }).as('gif')
   cy.visit("http://localhost:3000/")
 })
 
 
 it('should allow the user to save a fact and delete the fact on the saved fact page', () => {
+  cy.wait('@fact')
+  cy.wait('@gif')
   cy.get(".get-random-button").click({ force: true }).get(".fact-container")
     .get(".fact-container")
      .within(() => {

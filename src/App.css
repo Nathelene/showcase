@@ -4,10 +4,7 @@
   color:rgb(172, 88, 116);
   height:100vh;
   font-family: 'Lumanosimo', cursive;
-
 }
-
-
 
 .get-random-button {
   display:flex;
@@ -35,7 +32,6 @@
   width:45%;
   margin-left:27%;
   margin-top:4%
-  
 }
 
 @media screen and (max-width: 1137px) {
@@ -126,7 +122,6 @@
     height:20vh;
     margin-left:16%;
   }
-
 }
 
 @media screen and (max-width: 550px) {
@@ -137,17 +132,32 @@
   }
   .get-random-button {
     height:5vh;
-    width:60vw;
+    width:54vw;
     font-size: 2vh;
-    margin-left: 21%;
+    margin-left: 22%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .intro {
+    width:62%;
+    margin-left:18%;
+    font-size: 2vh;
+  }
+  .get-random-button {
+    height:5vh;
+    width:53vw;
+    font-size: 2vh;
+    margin-left: 23%;
   }
 }
 
 @media screen and (max-width: 414px) {
   .intro {
-    width:60%;
-    height:20vh;
-    margin-left:18%;
+    width:64%;
+    height:25vh;
+    margin-left:16%;
+    font-size: 2vh;
   }
   .get-random-button {
     height:5vh;

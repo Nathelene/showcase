@@ -68,11 +68,9 @@
         width: 55vw;
         height:15vh;
     }
-
   }
   
   @media screen and (max-width: 890px) {
-    
     .saved-card {
         width: 55vw;
         height:15vh;
@@ -110,10 +108,8 @@
   }
   
   @media screen and (max-width: 395px) {
-    @media screen and (max-width: 460px) {
         .save-card-container {
             height:40vh;
             font-size: 2vh;
         }
-      }
   }
