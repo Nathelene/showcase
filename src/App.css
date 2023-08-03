@@ -23,6 +23,11 @@
   font-family: 'Lumanosimo', cursive;
 }
 
+.get-random-button:hover {
+  background-color:rgb(186, 95, 125);
+}
+
+
 .space {
   color:rgb(172, 88, 116);
 }

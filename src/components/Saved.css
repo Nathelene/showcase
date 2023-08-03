@@ -5,6 +5,11 @@
     color:rgb(172, 88, 116)
 }
 
+.back-button:hover {
+    background-color:pink;
+    border-radius: 8px;
+}
+
 .saved-card {
     display:flex;
     align-items: center;
@@ -44,6 +49,12 @@
     border:none;
     color:rgb(238, 168, 179)
 }
+
+.delete-button:hover {
+    background-color: rgb(193, 109, 122);
+    border-radius: 10px;
+}
+
 .saved-title {
     color:rgb(172, 88, 116);
     font-size: 2.5vh;

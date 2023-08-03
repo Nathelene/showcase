@@ -14,6 +14,11 @@
   color:rgb(172, 88, 116);;
 }
 
+.save-button:hover {
+  background-color: pink;
+  border-radius: 10px;
+}
+
 .cat-gif {
     border-radius: 100px;
     height:28.5vh;
