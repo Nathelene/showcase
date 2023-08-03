@@ -108,7 +108,8 @@ function deleteSaved(index) {
             </>
             }
            
-            {fact?  <Card loading={loading} gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact}  /> : <p></p>}
+            {fact?  <><button className="get-random-button" onClick={getFact}>Get New Fact<span className="space">*</span> 
+            <span class="material-symbols-outlined">pets</span></button><Card loading={loading} gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact}  /></> : <p></p>}
           
             </div>} />
 

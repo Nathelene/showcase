@@ -1,5 +1,6 @@
 
 import { NavLink } from "react-router-dom"
+import PropTypes from 'prop-types';
 import './Saved.css'
 
 export default function Saved({savedFacts,deleteSaved,error}) {
@@ -29,4 +30,10 @@ export default function Saved({savedFacts,deleteSaved,error}) {
           }
         </div>
     )
+}
+
+Saved.propTypes = {
+  error: PropTypes.string.isRequired,
+  deleteSaved: PropTypes.func.isRequired,
+  savedFacts: PropTypes.array.isRequired,
 }
