@@ -12,7 +12,7 @@ export default function Saved({savedFacts,deleteSaved,error}) {
               <p>{fact}</p>
             </div>
             <button className="delete-button" onClick={() => deleteSaved(index)}>
-              <span class="material-symbols-outlined">delete</span>
+              <span className="material-symbols-outlined">delete</span>
             </button>
           </div>
         )
@@ -25,7 +25,7 @@ export default function Saved({savedFacts,deleteSaved,error}) {
             <h3 className="saved-title">{savedArray.length} saved facts</h3>
             <NavLink to='/'>
               <button className="back-button">
-                <span class="material-symbols-outlined">arrow_back</span>
+                <span className="material-symbols-outlined">arrow_back</span>
               </button>
             </NavLink>
               {savedArray}

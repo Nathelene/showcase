@@ -10,7 +10,7 @@ export default function Nav() {
             <h1 className="header">Feline Facts</h1>
             <NavLink to='/saved'>
                 <button className="saved-button">
-                  <span class="material-symbols-outlined">bookmarks</span>
+                  <span className="material-symbols-outlined">bookmarks</span>
                 </button>
             </NavLink>
         </nav>
