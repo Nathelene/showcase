@@ -64,18 +64,10 @@
   
   @media screen and (max-width: 980px) {
     .save-card-container {
-        width: 65vw;
+        width: 70vw;
     }
     .saved-card {
         width: 55vw;
-        height:15vh;
-    }
-  }
-  
-  @media screen and (max-width: 890px) {
-    .saved-card {
-        width: 55vw;
-        height:15vh;
     }
   }
   

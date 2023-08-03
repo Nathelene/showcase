@@ -61,8 +61,7 @@
     justify-content: center;
     width:50vw;
     height:45vh;
-    font-size: 2.2vh;
-  margin-left:4%
+    margin-left:4%
   }
 }
 
@@ -72,9 +71,6 @@
     flex-direction: column;
     align-items: center;
     height:69vh;
-    width:88vw;
-    margin-left: 5%;
-    margin-right: 15%;
     margin-top: 3%;
     font-size: 1.5vh;
   }
@@ -85,25 +81,17 @@
     margin-top: 3%
   }
   .fact-card {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width:79vw;
     height:41vh;
     font-size: 2.2vh;
-   margin-left:4%
   }
 }
 
 @media screen and (max-width: 880px) {
   .cat-gif {
-    border-radius: 100px;
-    height:18vh;
     width:15vw;
   }
   .fact-card {
-    width:79vw;
     height:37vh; 
   }
 }
@@ -118,23 +106,18 @@
 
 @media screen and (max-width: 690px) {
   .cat-gif {
-    border-radius: 100px;
-    height:18vh;
     width:20vw;
   }
 }
 
 @media screen and (max-width: 590px) {
   .cat-gif {
-    border-radius: 100px;
-    height:18vh;
     width:23vw;
   }
 }
 
 @media screen and (max-width: 500px) {
   .cat-gif {
-    border-radius: 100px;
     height:15vh;
     width:22vw;
   }
@@ -142,18 +125,13 @@
 
 @media screen and (max-width: 450px) {
   .cat-gif {
-    border-radius: 100px;
     height:13vh;
-    width:22vw;
     margin-top: 7%
   }
 }
 @media screen and (max-width: 414px) {
  
   .fact-container {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
     height:72vh;
     width:88vw;
     margin-left: 4%;
@@ -162,28 +140,20 @@
     font-size: 1.5vh;
   }
   .cat-gif {
-    border-radius: 100px;
     height:14vh;
     width:25vw;
    
   }
   .fact-card {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width:80vw;
     height:46vh;
     font-size: 1.9vh;
-   margin-left:4%
   }
 }
 
 @media screen and (max-width: 395px) {
   .cat-gif {
-    border-radius: 100px;
     height:15vh;
     width:32vw;
-    margin-top: 7%
   }
 }

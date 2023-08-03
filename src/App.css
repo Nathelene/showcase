@@ -12,13 +12,13 @@
   align-items: center;
   justify-content: center;
   height:5vh;
-  width:15vw;
+  width:20vw;
   border:none;
   background-color:  rgb(172, 88, 116);
   border-radius: 5px;
   color:rgb(252, 216, 221);
   font-size: 2.3vh;
-  margin-left: 43%;
+  margin-left: 41%;
   margin-top: 3%;
   font-family: 'Lumanosimo', cursive;
 }
@@ -41,22 +41,16 @@
     margin-left:25%;
   }
   .get-random-button {
-    height:5vh;
-    width:18vw;
-    font-size: 2.3vh;
     margin-left: 42%;
   }
 }
 
 @media screen and (max-width: 1010px) {
   .get-random-button {
-    height:5vh;
     width:35vw;
-    font-size: 2.3vh;
     margin-left: 34%;
   }
 }
-
 
 @media screen and (max-width: 950px) {
   .intro {
@@ -64,10 +58,7 @@
     margin-left:22%;
   }
   .get-random-button {
-    height:4.5vh;
-    width:28vw;
-    font-size: 1.9vh;
-    margin-left: 37%;
+    margin-left: 33%;
   }
 }
 
@@ -77,9 +68,7 @@
     margin-left:17%;
   }
   .get-random-button {
-    height:5vh;
     width:37vw;
-    font-size: 2vh;
     margin-left: 32%;
   }
 }
@@ -89,12 +78,6 @@
     width:71%;
     margin-left:14%;
   }
-  .get-random-button {
-    height:5vh;
-    width:43vw;
-    font-size: 2vh;
-    margin-left: 29%;
-  }
 }
 
 @media screen and (max-width: 690px) {
@@ -103,9 +86,7 @@
     margin-left:12%;
   }
   .get-random-button {
-    height:5vh;
     width:50vw;
-    font-size: 2vh;
     margin-left: 26%;
   }
 }
@@ -128,13 +109,10 @@
 @media screen and (max-width: 550px) {
   .intro {
     width:60%;
-    height:20vh;
     margin-left:18%;
   }
   .get-random-button {
-    height:5vh;
     width:54vw;
-    font-size: 2vh;
     margin-left: 22%;
   }
 }
@@ -142,14 +120,6 @@
 @media screen and (max-width: 460px) {
   .intro {
     width:62%;
-    margin-left:18%;
-    font-size: 2vh;
-  }
-  .get-random-button {
-    height:5vh;
-    width:53vw;
-    font-size: 2vh;
-    margin-left: 23%;
   }
 }
 
@@ -158,28 +128,19 @@
     width:64%;
     height:25vh;
     margin-left:16%;
-    font-size: 2vh;
   }
   .get-random-button {
     height:5vh;
     width:40vw;
-    font-size: 1.5vh;
+    font-size: 1.8vh;
     margin-left: 30%;
     margin-top: 6%;
   }
 }
 
 @media screen and (max-width: 395px) {
-  .intro {
-    width:64%;
-    height:25vh;
-    margin-left:16%;
-    font-size: 2vh;
-  }
-
   .get-random-button {
     width:45vw;
-    font-size: 1.8vh;
     margin-left: 27%;
   }
 }
