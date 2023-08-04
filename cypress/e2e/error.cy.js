@@ -14,6 +14,7 @@ describe('The user will be notified of failed connection and 404 error when nece
       cy.visit("http://localhost:3000/")
 
       cy.wait(['@500','@gif']).then((intercept) => {
+        
       cy.get('.home').get(".error-message").should('be.visible');
         
       })
