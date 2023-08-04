@@ -1,70 +1,48 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Feline Facts
+## ABSTRACT
+'Feline Facts' is a web application that brings you random and intriguing cat facts from all over the world. Learn something new about your favorite pet with the click of a button. This app allows you to save your favorite facts to revisit later, and features a user-friendly interface for a smooth experience. Embrace your love for cats and expand your knowledge with the Feline Facts App. 
 
-## Available Scripts
+## LEARNING GOALS
+- Demonstrate proficiency in testing React components and asynchronous JavaScript code, including the use of Cypress for end-to-end testing.
+- Create a multi-page user experience using React Router to handle routing and navigation.
+- Apply real-world API integration and handle network requests, including error handling and data fetching.
+- Work within constraints to deliver a product for your niche audience, which helps solve a problem unique to them.
 
-In the project directory, you can run:
+## WINS/CHALLENGES 
+### WINS
+- Being able to successfully demonstrate the fundalmentals of a react application.
+- Successfully implementing two APIs.
+- Effective use of React to create a dynamic and interactive user interface, allowing users to navigate through different views and components.
+- Utilization of React Router to handle routing and enable multi-page functionality, enhancing the user experience.
 
-### `npm start`
+### CHALLENGES
+- Creating an complete react application within a four day period.
+- Running into multiple issues with cypress while on a short deadline.
+  
+## TECHNOLOGIES USED 
+<div>
+  <a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
+  <a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
+  <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
+  <a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
+  <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
+  <a href="https://webpack.js.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/webpack-original.svg" alt="Webpack" height="50" /></a>  
+  <a href="https://www.cypress.io/" target="_blank"><img style="margin: 10px" src="https://cdn.sanity.io/images/o0o2tn5x/production/13b9c8412093e2f0cdb5495e1f59144967fa1664-512x512.jpg" alt="Cypress" height="50" /></a>
+</div>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</td><td valign="top" width="33%">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## COLLABORATORS
+- Natalie Baker - [Github](https://github.com/Nathelene) | [LinkedIn](https://www.linkedin.com/in/natalie-baker-678323272/)
 
-### `npm test`
+## PREVIEW OF APPLICATION
+![ezgif com-gif-maker (4)](https://github.com/Nathelene/showcase/assets/121268293/84ac4da2-4cd4-4b2b-bda1-102552705ecb)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## INSTALLATION INSTRUCTIONS
+1. Fork this repo, and clone it down into your local machine using the SSH key
+2. After cloning it down, `cd` into the project and run `npm install`
+3. Once the installation is done, you can now run `npm start` to run the application in your web browser
+### or...
+Click this [link](https://showcase-ebon.vercel.app/) to visit the application on your web browser!
