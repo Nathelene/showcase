@@ -25,7 +25,7 @@ beforeEach(() => {
       .get(".nav").contains("h1", "Feline Facts").should('be.visible')
       .get(".saved-button").should("exist").should('be.visible')
       .get(".intro").contains("h2", "Welcome Cat Lovers!").should('be.visible')
-      .get(".intro").contains("p","Click below to learn more about your Meow-velous companion!")
+      .get(".intro").contains("p","Click below to learn more about your Meow-velous companion!").should('be.visible')
       .get(".get-random-button").should("exist").should('be.visible')
       cy.wait('@fact')
       cy.wait('@gif')
