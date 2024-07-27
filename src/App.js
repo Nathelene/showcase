@@ -29,10 +29,8 @@ useEffect(() => {
     .then(data => {
       setAllFacts(data.data)
       setSaved('bookmark')
-      setLoading(false)
     })
     .catch(err => {
-      setLoading(false)
       setError(err.message)
     })
 
