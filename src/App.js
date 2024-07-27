@@ -36,25 +36,66 @@ useEffect(() => {
 
 },[])
 
+
+
+// useEffect(() => {
+
+//   fetch("https://cataas.com/cat/gif")
+//     .then(res => {
+//     if(!res.ok) {
+//       throw Error('Unexpected error. Please refresh the page')
+//     }
+//     return res
+//   })
+//     .then(data => {
+//       setGif(data.url)
+//       setLoading(false)
+//   })
+//     .catch(err => {
+//       setLoading(false)
+//       setError(err.message)
+//   })
+    
+// },[])
+
 useEffect(() => {
 
-  fetch("https://cataas.com/cat/gif")
-    .then(res => {
-    if(!res.ok) {
-      throw Error('Unexpected error. Please refresh the page')
-    }
-    return res
-  })
-    .then(data => {
-      setGif(data.url)
-      setLoading(false)
-  })
-    .catch(err => {
-      setLoading(false)
-      setError(err.message)
-  })
-    
+  loadMeme()
+  
 },[])
+
+
+
+const loadMeme = async() => {
+
+  try {
+
+    const url = "https://cataas.com/cat/gif"
+    const res = await fetch(url)
+
+    if(!res.ok) {
+          throw Error('Unexpected error. Please refresh the page')
+        }
+   
+        setGif(res.url)
+        setLoading(false)
+
+  } catch(err) {
+
+    setLoading(false)
+    setError(err.message)
+
+  }
+
+}
+
+
+
+
+
+
+
+
 
 function getFact() {
   const randomNum = Math.floor(Math.random() * allFacts.length)
