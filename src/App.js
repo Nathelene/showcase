@@ -19,22 +19,46 @@ const [loading, setLoading] = useState(true)
 
 useEffect(() => {
 
-  fetch("https://meowfacts.herokuapp.com/?count=50")
-    .then(res => {
-      if(!res.ok) {
-        throw Error('Unexpected error. Please refresh the page')
-      }
-      return res.json()
-    })
-    .then(data => {
-      setAllFacts(data.data)
-      setSaved('bookmark')
-    })
-    .catch(err => {
-      setError(err.message)
-    })
+  // fetch("https://meowfacts.herokuapp.com/?count=50")
+  //   .then(res => {
+  //     if(!res.ok) {
+  //       throw Error('Unexpected error. Please refresh the page')
+  //     }
+  //     return res.json()
+  //   })
+  //   .then(data => {
+  //     setAllFacts(data.data)
+  //     setSaved('bookmark')
+  //   })
+  //   .catch(err => {
+  //     setError(err.message)
+  //   })
+  loadFact()
 
 },[])
+
+let loadFact = async() => {
+
+  try {
+
+    const url = "https://meowfacts.herokuapp.com/?count=50"
+    const res = await fetch(url)
+    const data = await res.json()
+  
+    if(!res.ok) {
+            throw Error('Unexpected error. Please refresh the page')
+          }
+  
+        setAllFacts(data.data)
+        setSaved('bookmark')
+
+  } catch(err) {
+    setError(err.message)
+  }
+
+}
+
+
 
 
 
@@ -60,13 +84,12 @@ useEffect(() => {
 
 useEffect(() => {
 
-  loadMeme()
+  loadGif()
   
 },[])
 
 
-
-const loadMeme = async() => {
+const loadGif = async() => {
 
   try {
 
@@ -86,7 +109,6 @@ const loadMeme = async() => {
     setError(err.message)
 
   }
-
 }
 
 
