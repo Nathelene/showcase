@@ -41,8 +41,7 @@ let loadFact = async() => {
 
   try {
 
-    const url = "https://meowfacts.herokuapp.com/?count=50"
-    const res = await fetch(url)
+    const res = await fetch("https://meowfacts.herokuapp.com/?count=50")
     const data = await res.json()
   
     if(!res.ok) {
@@ -93,8 +92,7 @@ const loadGif = async() => {
 
   try {
 
-    const url = "https://cataas.com/cat/gif"
-    const res = await fetch(url)
+    const res = await fetch("https://cataas.com/cat/gif")
 
     if(!res.ok) {
           throw Error('Unexpected error. Please refresh the page')
@@ -110,10 +108,6 @@ const loadGif = async() => {
 
   }
 }
-
-
-
-
 
 
 
