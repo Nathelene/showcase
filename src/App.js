@@ -3,6 +3,7 @@ import './App.css';
 import Nav from './components/Nav'
 import Card from './components/Card'
 import Saved from './components/Saved'
+import Form from './components/Form'
 import PageNotFound from './components/PageNotFound';
 import { useEffect, useState } from 'react'
 import { Routes,Route } from 'react-router-dom'
@@ -133,6 +134,7 @@ function deleteSaved(index) {
               <span className="material-symbols-outlined">pets</span></button><Card loading={loading} gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact} />
               </> : <p></p> }
             </div> } />
+            <Route path="/addFact" element={<Form />}/>
             <Route path="/saved" element={<Saved error={error} fact={fact} deleteSaved={deleteSaved} savedFacts={savedFacts}/> } />
             <Route path="*" element={<PageNotFound />} />
         </Routes>
