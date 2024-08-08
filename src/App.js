@@ -19,44 +19,66 @@ const [loading, setLoading] = useState(true)
 
 useEffect(() => {
 
-  fetch("https://meowfacts.herokuapp.com/?count=50")
-    .then(res => {
-      if(!res.ok) {
-        throw Error('Unexpected error. Please refresh the page')
-      }
-      return res.json()
-    })
-    .then(data => {
-      setAllFacts(data.data)
-      setSaved('bookmark')
-      setLoading(false)
-    })
-    .catch(err => {
-      setLoading(false)
-      setError(err.message)
-    })
+  loadFact()
 
 },[])
+
+
+let loadFact = async() => {
+
+  try {
+
+    const res = await fetch("https://meowfacts.herokuapp.com/?count=50")
+    const data = await res.json()
+  
+    if(!res.ok) {
+            throw Error('Unexpected error. Please refresh the page')
+          }
+  
+        setAllFacts(data.data)
+        setSaved('bookmark')
+
+  } catch(err) {
+    setError(err.message)
+  }
+
+}
+
+
+
+
 
 useEffect(() => {
 
-  fetch("https://cataas.com/cat/gif")
-    .then(res => {
-    if(!res.ok) {
-      throw Error('Unexpected error. Please refresh the page')
-    }
-    return res
-  })
-    .then(data => {
-      setGif(data.url)
-      setLoading(false)
-  })
-    .catch(err => {
-      setLoading(false)
-      setError(err.message)
-  })
-    
+  loadGif()
+  
 },[])
+
+
+const loadGif = async() => {
+
+  try {
+
+    const res = await fetch("https://cataas.com/cat/gif")
+
+    if(!res.ok) {
+          throw Error('Unexpected error. Please refresh the page')
+        }
+   
+        setGif(res.url)
+        setLoading(false)
+
+  } catch(err) {
+
+    setLoading(false)
+    setError(err.message)
+
+  }
+}
+
+
+
+
 
 function getFact() {
   const randomNum = Math.floor(Math.random() * allFacts.length)
