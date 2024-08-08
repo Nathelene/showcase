@@ -1,7 +1,13 @@
 import { NavLink } from "react-router-dom"
+import { useState } from 'react'
 
 
 export default function Form() {
+
+ 
+const [newFact, setNewFact] = useState('')
+
+
 
 
     return (
@@ -12,6 +18,15 @@ export default function Form() {
                 <span className="material-symbols-outlined">arrow_back</span>
               </button>
             </NavLink>
+
+            <input 
+                type='text'
+                value={newFact}
+                name="newFact"
+                placeholder="Add New Fact Here"
+                onChange={(e) => setNewFact(e.target.value)}
+            />
+            
         </div>
     )
 }
