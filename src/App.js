@@ -80,7 +80,6 @@ const loadGif = async() => {
 
 
 
-
 function getFact() {
   const randomNum = Math.floor(Math.random() * allFacts.length)
   const currentFact = allFacts[randomNum]
