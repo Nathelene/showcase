@@ -8,7 +8,7 @@ import PageNotFound from './components/PageNotFound';
 import { useEffect, useState } from 'react'
 import { Routes,Route } from 'react-router-dom'
 
-function App() {
+const App = () => {
 
 const [fact, setFact] = useState("")
 const [allFacts, setAllFacts] = useState([])
@@ -22,7 +22,7 @@ useEffect(() => {
 
   loadFact()
 
-},[])
+},[]);
 
 
 let loadFact = async() => {
@@ -47,13 +47,11 @@ let loadFact = async() => {
 
 
 
-
-
 useEffect(() => {
 
   loadGif()
   
-},[])
+},[]);
 
 
 const loadGif = async() => {
@@ -79,8 +77,7 @@ const loadGif = async() => {
 
 
 
-
-function getFact() {
+let getFact = () => {
   const randomNum = Math.floor(Math.random() * allFacts.length)
   const currentFact = allFacts[randomNum]
   setFact(currentFact)
@@ -88,29 +85,30 @@ function getFact() {
   {savedFacts.some(fact=> fact === currentFact)? setSaved('bookmark_added') : setSaved('bookmark')}
 }
 
-function toggleSavedFacts(index) {
+let toggleSavedFacts = (index) => {
   const newSaved = saved === 'bookmark' ? 'bookmark_added' : 'bookmark'
   setSaved(newSaved)
   { saved === 'bookmark' && setSavedFacts([...savedFacts, fact])}
   { saved === 'bookmark_added' && removeFact(index)}
 }
 
-function removeFact() {
+let removeFact = () => {
   const filteredFacts = savedFacts.filter(f =>  f !== fact)
   setSavedFacts(filteredFacts)
 }
 
-function deleteSaved(index) {
+let deleteSaved = (index) => {
   let filterSaved = savedFacts.filter((fact, i) => i !== index);
   setSavedFacts(filterSaved);
   setSaved('bookmark')
 }
 
-function addNewFact(newFact) {
-  
+let addNewFact = (newFact) => {
+
   setAllFacts([...allFacts, newFact])
   
 }
+
 
   return (
 

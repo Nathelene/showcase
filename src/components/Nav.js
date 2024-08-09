@@ -2,7 +2,7 @@
 import { NavLink } from "react-router-dom"
 import './Nav.css'
 
-export default function Nav() {
+const Nav = () => {
 
     return(
         <nav className="nav">
@@ -21,3 +21,5 @@ export default function Nav() {
         </nav>
     )
 };
+
+export default Nav

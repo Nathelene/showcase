@@ -2,7 +2,7 @@
 import './Card.css'
 import PropTypes from 'prop-types';
 
-export default function Card({factText, toggleSavedFacts,saved,gif,loading}) {
+const Card = ({factText, toggleSavedFacts,saved,gif,loading}) => {
 
     return (
         <div className="fact-container">
@@ -24,3 +24,5 @@ Card.propTypes = {
     gif: PropTypes.string.isRequired,
     loading: PropTypes.bool.isRequired
   }
+
+  export default Card
