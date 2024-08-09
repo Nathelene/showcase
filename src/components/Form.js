@@ -2,12 +2,22 @@ import { NavLink } from "react-router-dom"
 import { useState } from 'react'
 
 
-export default function Form() {
+export default function Form({addNewFact}) {
 
  
 const [newFact, setNewFact] = useState('')
 
 
+
+
+let submitNew = (e) => {
+
+    e.preventDefault()
+
+        addNewFact(newFact)
+        setNewFact('')
+    
+}
 
 
     return (
@@ -26,7 +36,9 @@ const [newFact, setNewFact] = useState('')
                 placeholder="Add New Fact Here"
                 onChange={(e) => setNewFact(e.target.value)}
             />
-            
+
+            <button className="add-button" onClick={submitNew}>ADD</button>
+
         </div>
     )
 }

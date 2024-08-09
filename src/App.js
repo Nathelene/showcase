@@ -106,6 +106,12 @@ function deleteSaved(index) {
   setSaved('bookmark')
 }
 
+function addNewFact(newFact) {
+  
+  setAllFacts([...allFacts, newFact])
+  
+}
+
   return (
 
     <div className="App">
@@ -133,7 +139,7 @@ function deleteSaved(index) {
               <span className="material-symbols-outlined">pets</span></button><Card loading={loading} gif={gif} saved={saved} toggleSavedFacts={toggleSavedFacts} factText={fact} />
               </> : <p></p> }
             </div> } />
-            <Route path="/addFact" element={<Form />}/>
+            <Route path="/addFact" element={<Form addNewFact={addNewFact}/>} />
             <Route path="/saved" element={<Saved error={error} fact={fact} deleteSaved={deleteSaved} savedFacts={savedFacts}/> } />
             <Route path="*" element={<PageNotFound />} />
         </Routes>
