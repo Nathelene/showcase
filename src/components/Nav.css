@@ -6,26 +6,29 @@
     border-bottom: 2px solid rgb(172, 88, 116);
     height:15vh;
     margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 12%;
 }
 
-.saved-button {
+.saved-button, .add-fact-button {
   background-color: transparent;
   border:none;
   height:5vh;
   border-radius: 8px;
-  color:rgb(172, 88, 116)
+  color:rgb(172, 88, 116);
 }
 
- .saved-button:hover {
+
+ .saved-button:hover , .add-fact-button:hover{
     background-color: pink;
 }
 
 .header {
-    margin-left: 40%;
-    margin-right: 35%;
+
+    margin-left: 40px;
+    margin-right: 20px;
     color:rgb(172, 88, 116);
     font-size: 4vh;
+
 }
 
 @media screen and (max-width: 1146px) {
