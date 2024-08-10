@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom"
 import { useState } from 'react'
 import PropTypes from 'prop-types';
+import './Form.css'
 
 
 const Form = ({addNewFact}) => {
 
  
     const [newFact, setNewFact] = useState('')
+    const [confirmation, setConfirmation] = useState(false)
 
     let submitNew = (e) => {
 
@@ -14,14 +16,21 @@ const Form = ({addNewFact}) => {
 
             addNewFact(newFact)
             setNewFact('')
-        
+            setConfirmation(true)
+           
     }
+
+    let reset = () => {
+
+        setConfirmation(false)
+    }
+    
 
         return (
             <div className='form'>
-                <h3>Add A New Fact To The Collection!</h3>
+                {confirmation ? <h3>Your fact has been submitted!</h3> : <h3>Add A New Fact To The Collection!</h3>}
                 <NavLink to='/'>
-                <button className="back-button">
+                <button className="form-back-button" onClick={reset}>
                     <span className="material-symbols-outlined">arrow_back</span>
                 </button>
                 </NavLink>
