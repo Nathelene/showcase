@@ -9,15 +9,22 @@ const Form = ({addNewFact}) => {
  
     const [newFact, setNewFact] = useState('')
     const [confirmation, setConfirmation] = useState(false)
+    const [error, setError] = useState(false)
 
     let submitNew = (e) => {
 
         e.preventDefault()
-
+            
+        
             addNewFact(newFact)
             setNewFact('')
             setConfirmation(true)
+            setError(false)
            
+            if (newFact === '') {
+                setError(true)
+                setConfirmation(false)
+            }
     }
 
     let reset = () => {
@@ -44,6 +51,7 @@ const Form = ({addNewFact}) => {
                 />
 
                 <button className="add-button" onClick={submitNew}>ADD</button>
+                {error && <p>Input Required</p> }
 
             </div>
         )
