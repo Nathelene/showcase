@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 import PropTypes from 'prop-types';
 import './Saved.css'
 
-export default function Saved({savedFacts,deleteSaved,error}) {
+ const Saved = ({savedFacts,deleteSaved,error}) => {
 
   const savedArray = savedFacts.map((fact, index) => {
       return (
@@ -39,3 +39,5 @@ Saved.propTypes = {
   deleteSaved: PropTypes.func.isRequired,
   savedFacts: PropTypes.array.isRequired,
 }
+
+export default Saved
